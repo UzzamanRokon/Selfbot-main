@@ -31,7 +31,7 @@ module.exports = {
             // Extract balance and other details
             const balanceLTC = data.balance / 100000000; // Convert satoshis to LTC
             const balanceUSD = balanceLTC * 176.29; // Assuming 1 LTC = 176.29 USD (can be adjusted)
-            const balanceINR = balanceLTC * 13068.90; // Assuming 1 LTC = 13068.90 INR (can be adjusted)
+            const balanceBDT = balanceLTC * 7693.63; // Assuming 1 LTC = 7693.63 BDT (can be adjusted)
             const totalReceived = data.total_received / 100000000;
             const totalSent = data.total_sent / 100000000;
             const transactionCount = data.n_tx;
@@ -40,7 +40,7 @@ module.exports = {
             const balanceMessage = `📈 **Litecoin (LTC) Wallet Address:** ${ltcAddress}\n` +
                                    `💰 **Balance (LTC):** ${balanceLTC} LTC\n` +
                                    `💵 **Balance (USD):** $${balanceUSD.toFixed(2)}\n` +
-                                   `🇮🇳 **Balance (INR):** ₹${balanceINR.toFixed(2)}\n` +
+                                   `৳ **Balance (BDT):** ৳${balanceBDT.toFixed(2)}\n` +
                                    `📥 **Total Received:** ${totalReceived} LTC\n` +
                                    `📤 **Total Sent:** ${totalSent} LTC\n` +
                                    `🔢 **Number of Transactions:** ${transactionCount}`;
