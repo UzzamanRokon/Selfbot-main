@@ -1,12 +1,12 @@
 // Define the conversion rate from USD to INR
-const C2I_Rate = 87; // Example: 1 USD = 87 INR
+const C2B_Rate = 119.57; // Example: 1 USD = 119.57 BDT
 
 module.exports = {
-    name: 'c2i',
-    description: 'Converts an amount from USD to INR.',
+    name: 'c2b',
+    description: 'Converts an amount from USD to BDT.',
     cooldown: 3,
     /**
-     * Executes the c2i command.
+     * Executes the c2b command.
      * 
      * @param {Channel} channel The channel where the command was executed.
      * @param {Message} message The message object for the command.
@@ -18,7 +18,7 @@ module.exports = {
 
         // Check if amount is provided
         if (!amountStr) {
-            return message.channel.send('Please provide an amount in Ltc to convert to INR.');
+            return message.channel.send('Please provide an amount in Ltc to convert to BDT.');
         }
 
         // Convert the amount to float and remove the '$' symbol if present
@@ -29,10 +29,10 @@ module.exports = {
             return message.channel.send('Invalid amount provided.');
         }
 
-        // Calculate the amount in INR using the conversion rate
-        const usdAmount = amount * C2I_Rate;
+        // Calculate the amount in BDT using the conversion rate
+        const usdAmount = amount * C2B_Rate;
 
         // Send the result to the channel
-        message.channel.send(`Amount in Ltc: $${amount.toFixed(2)}\nAmount in INR: ₹${usdAmount.toFixed(2)}`);
+        message.channel.send(`Amount in Ltc: $${amount.toFixed(2)}\nAmount in BDT: ৳${usdAmount.toFixed(2)}`);
     }
 };
