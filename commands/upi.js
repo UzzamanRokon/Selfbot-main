@@ -1,8 +1,8 @@
 module.exports = {
-    name: 'upi',
-    description: '💳 Pay Here (UPI) ID along with an image in a styled message with emojis.',
+    name: 'payment',
+    description: '💳 Pay Here (BKASH/NAGAD) NUM along with an image in a styled message with emojis.',
     /**
-     * Executes the upi command.
+     * Executes the payment command.
      * 
      * @param {Channel} channel The channel where the command was executed.
      * @param {Message} message The message object for the command.
@@ -10,23 +10,23 @@ module.exports = {
      * @param {String[]} args The arguments passed with the command.
      */
     async execute(channel, message, client, args) {
-        // Replace 'YOUR_UPI_ID' with your actual UPI ID
-        const upiID = 'devrock@fam';
+        // Replace 'YOUR_NUM' with your actual UPI ID
+        const upiID = '01797214452';
 
         try {
-            // Send the UPI ID as a message
-            await message.channel.send(`💳 **Your UPI (Unified Payments Interface) ID:**\n\n||${upiID}||`);
+            // Send the BKASH/NAGAD NUM as a message
+            await message.channel.send(`💳 **Your BKASH/NAGAD NUM (Unified Payments Interface) ID:**\n\n||${upiID}||`);
             
             // Send the image as a separate message
             await message.channel.send({
                 files: [{
-                    attachment: './images/upi_qr_code.png', // Example: './images/upi_qr_code.png'
-                    name: 'upi_qr_code.png'
+                    attachment: './images/payment_qr_code.png', // Example: './images/payment_qr_code.png'
+                    name: 'payment_qr_code.png'
                 }]
             });
         } catch (error) {
-            console.error('Error sending UPI message:', error);
-            message.channel.send('Error sending UPI message. Please try again later.');
+            console.error('Error sending BKASH/NAGAD message:', error);
+            message.channel.send('Error sending BKASH/NAGAD message. Please try again later.');
         }
     }
 };
