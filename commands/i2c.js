@@ -1,12 +1,12 @@
 // Define the conversion rate from INR to USD
-const INR_TO_USD_RATE = 1 / 91; // Example: 1 INR = 0.014 USD
+const BDT_TO_USD_RATE = 1 / 94; // Example: 1 BDT = 0.0084 USD
 
 module.exports = {
-    name: 'i2c',
-    description: 'Converts an amount from INR to USD.',
+    name: 'b2c',
+    description: 'Converts an amount from BDT to USD.',
     cooldown: 3,
     /**
-     * Executes the inr2usd command.
+     * Executes the bdt2usd command.
      * 
      * @param {Channel} channel The channel where the command was executed.
      * @param {Message} message The message object for the command.
@@ -18,7 +18,7 @@ module.exports = {
 
         // Check if amount is provided
         if (!amountStr) {
-            return message.channel.send('Please provide an amount in INR to convert to Ltc.');
+            return message.channel.send('Please provide an amount in BDT to convert to Ltc.');
         }
 
         // Convert the amount to float
@@ -30,9 +30,9 @@ module.exports = {
         }
 
         // Calculate the amount in USD using the conversion rate
-        const usdAmount = amount * INR_TO_USD_RATE;
+        const usdAmount = amount * BDT_TO_USD_RATE;
 
         // Send the result to the channel
-        message.channel.send(`Amount in INR: ₹${amount.toFixed(2)}\nAmount in Ltc: $${usdAmount.toFixed(2)}`);
+        message.channel.send(`Amount in BDT: ৳${amount.toFixed(2)}\nAmount in Ltc: $${usdAmount.toFixed(2)}`);
     }
 };
