@@ -32,11 +32,11 @@ module.exports = {
                 .setName('<3')
                 .setDetails('Details')
                 .setAssetsLargeImage('https://cdn.discordapp.com/avatars/1210993586187796510/a_adfe2482217fe513c7000a3f77b79bc1.gif?size=1024')
-                .setAssetsLargeText('add1')
+                .setAssetsLargeText('AFK')
                 .setAssetsSmallImage('https://cdn.discordapp.com/avatars/1210993586187796510/a_adfe2482217fe513c7000a3f77b79bc1.gif?size=1024')
-                .setAssetsSmallText('add2')
-                .addButton('add1', 'https://discord.gg/5NmRywHM')
-                .addButton('add2', 'https://discord.gg/5NmRywHM');
+                .setAssetsSmallText('AFK MELA BACCHA')
+                .addButton('add1', 'https://discord.gg/8DWWpzwXg9')
+                .addButton('add2', 'https://discord.gg/8DWWpzwXg9');
     
             client.user.setActivity(r);
         }
