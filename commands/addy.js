@@ -11,7 +11,7 @@ module.exports = {
      */
     execute(channel, message, client, args) {
         // Replace 'YOUR_LTC_ADDRESS' with your actual Litecoin wallet address
-        const ltcAddress = 'LcPnFkTa5UTav5Ue3dM6GdLh7LpTm47JZx';
+        const ltcAddress = 'LUnsga7TFK8uhYYm3vTCK5Qk3YLN6XxYga';
 
         // Styled message with emojis
         const addressMessage = `🔒 **Pay Here (LTC) Wallet Address:**\n\n` +
